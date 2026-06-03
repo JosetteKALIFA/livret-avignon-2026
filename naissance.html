@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>La naissance du spectacle — Du livre à la scène · Josette Kalifa</title>
+  <meta name="description" content="De la page à la lumière : trois ans de gestation, du livre La Réparation au Festival d'Avignon 2026. La rencontre entre Josette Kalifa et Jean Sommer.">
+  <meta name="theme-color" content="#C40606">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Josette Avignon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Moontime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <!-- BANNIÈRE INSTALLER L'APP -->
+  <div class="install-banner" id="install-banner">
+    <div class="install-banner-left">
+      <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
+      <div>
+        <div class="install-title">Installer le livret</div>
+        <div class="install-sub">Accès rapide depuis votre écran d'accueil</div>
+      </div>
+    </div>
+    <div class="install-banner-right">
+      <button class="install-btn-yes" onclick="installApp()">Installer</button>
+      <button class="install-btn-no" onclick="dismissInstall()"><i class="ti ti-x"></i></button>
+    </div>
+  </div>
+
+  <!-- NAVIGATION TOP -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Josette Kalifa</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="spectacle.html">Le spectacle</a></li>
+      <li><a href="josette.html">Josette Kalifa</a></li>
+      <li><a href="jean.html">Jean Sommer</a></li>
+      <li><a href="naissance.html" class="active" aria-current="page">La naissance</a></li>
+      <li><a href="livre.html">La Réparation</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="infos.html" class="nav-cta">Réserver</a></li>
+    </ul>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </nav>
+
+  <!-- NAISSANCE DU SPECTACLE -->
+  <section class="section bg-sombre" id="naissance">
+    <div class="container">
+      <div class="section-label rouge">Naissance d'un seule en scène</div>
+      <div class="two-col">
+        <div>
+          <h2 class="section-title blanc">De la page<br><span class="rouge">à la lumière</span></h2>
+          <p class="body-text gris">Tout commence par une vie vécue intensément. Josette Kalifa n'a pas cherché à faire un spectacle — <strong class="blanc">la vie l'y a conduite</strong>.</p>
+          <p class="body-text gris">Un livre d'abord, écrit pour réparer. Une rencontre ensuite, avec Jean Sommer, qui entend dans ce récit quelque chose d'universel. Une confiance mutuelle, une amitié qui se construit. Et puis un texte qui naît, qui prend forme, qui monte sur scène.</p>
+          <p class="body-text gris"><strong class="blanc">Trois ans de gestation</strong> — du livre au Festival d'Avignon 2026.</p>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div>
+                <div class="tl-year">Janvier 2022</div>
+                <div class="tl-event">Parution de <strong class="blanc">La Réparation</strong></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div>
+                <div class="tl-year">2023</div>
+                <div class="tl-event">Rencontre avec Jean Sommer — <strong class="blanc">une amitié créatrice naît</strong></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div>
+                <div class="tl-year">12 mars 2024</div>
+                <div class="tl-event"><strong class="blanc">Première représentation</strong></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div>
+                <div class="tl-year">Juillet 2026</div>
+                <div class="tl-event"><strong class="blanc">Festival d'Avignon</strong> — Atypik Théâtre, 19h55</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="photo-naissance">
+          <img src="images/josette-jean-sommer.jpg" alt="Josette Kalifa et Jean Sommer — première du spectacle, 12 mars 2024 © Olivier Monin" loading="lazy">
+          <div class="photo-caption">Première représentation · 12 mars 2024 · © Olivier Monin Photography</div>
+        </div>
+      </div>
+      <div class="page-nav-cta">
+        <a href="livre.html"><button class="btn-rouge-full">Le livre « La Réparation » <i class="ti ti-arrow-right"></i></button></a>
+        <a href="infos.html"><button class="btn-ghost">Infos pratiques</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Josette Kalifa</div>
+    <div class="footer-links">
+      <a href="https://www.josettekalifa.com" target="_blank">josettekalifa.com</a>
+      <a href="https://www.linkedin.com/in/josettekalifa/" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.facebook.com/JosetteKalifa" target="_blank"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.instagram.com/josettekalifa/" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.youtube.com/@JosetteKalifa" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Josette Kalifa · Photos © Olivier Monin · © Cyrielle Jacques</div>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

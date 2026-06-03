@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: 'fr'
+
+collections:
+
+  - name: "infos_pratiques"
+    label: "📅 Infos pratiques & dates"
+    files:
+      - label: "Informations du spectacle"
+        name: "infos"
+        file: "content/infos.json"
+        format: json
+        fields:
+          - {label: "Dates", name: "dates", widget: "string", hint: "Ex: 4 – 25 juillet 2026"}
+          - {label: "Horaire", name: "horaire", widget: "string", hint: "Ex: 19h55"}
+          - {label: "Relâche", name: "relache", widget: "string", hint: "Ex: Relâche les lundis"}
+          - {label: "Lieu", name: "lieu", widget: "string"}
+          - {label: "Adresse", name: "adresse", widget: "string"}
+          - {label: "Téléphone", name: "telephone", widget: "string"}
+          - {label: "Lien de réservation", name: "lien_resa", widget: "string", required: false, hint: "Laisser vide si pas encore disponible"}
+
+  - name: "spectacle"
+    label: "🎭 Le spectacle"
+    files:
+      - label: "Contenu du spectacle"
+        name: "spectacle"
+        file: "content/spectacle.json"
+        format: json
+        fields:
+          - {label: "Synopsis", name: "synopsis", widget: "text"}
+          - label: "Témoignages"
+            name: "temoignages"
+            widget: "list"
+            fields:
+              - {label: "Texte", name: "texte", widget: "text"}
+              - {label: "Auteur", name: "auteur", widget: "string"}
+
+  - name: "josette"
+    label: "👤 Josette Kalifa"
+    files:
+      - label: "Bio de Josette"
+        name: "josette"
+        file: "content/josette.json"
+        format: json
+        fields:
+          - {label: "Biographie", name: "bio", widget: "text"}
+          - {label: "Citation", name: "citation", widget: "text"}
+
+  - name: "jean"
+    label: "✍️ Jean Sommer"
+    files:
+      - label: "Présentation de Jean Sommer"
+        name: "jean"
+        file: "content/jean.json"
+        format: json
+        fields:
+          - {label: "Texte de présentation", name: "texte", widget: "text"}
+          - {label: "Citation de Jean Sommer", name: "citation", widget: "text"}
+
+  - name: "livre"
+    label: "📖 La Réparation"
+    files:
+      - label: "Le livre"
+        name: "livre"
+        file: "content/livre.json"
+        format: json
+        fields:
+          - {label: "Quatrième de couverture", name: "texte", widget: "text"}
+          - {label: "Lien d'achat BOD", name: "lien_bod", widget: "string"}
+          - {label: "Prix", name: "prix", widget: "string", hint: "Ex: 15 €"}

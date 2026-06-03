@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Comment je suis devenue une Géante — Josette Kalifa · Avignon 2026</title>
+  <meta name="description" content="Spectacle solo de Josette Kalifa — Festival d'Avignon 2026, Atypik Théâtre, du 4 au 25 juillet, 19h55.">
+  <meta name="theme-color" content="#C40606">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Josette Avignon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Moontime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <!-- BANNIÈRE INSTALLER L'APP -->
+  <div class="install-banner" id="install-banner">
+    <div class="install-banner-left">
+      <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
+      <div>
+        <div class="install-title">Installer le livret</div>
+        <div class="install-sub">Accès rapide depuis votre écran d'accueil</div>
+      </div>
+    </div>
+    <div class="install-banner-right">
+      <button class="install-btn-yes" onclick="installApp()">Installer</button>
+      <button class="install-btn-no" onclick="dismissInstall()"><i class="ti ti-x"></i></button>
+    </div>
+  </div>
+
+  <!-- NAVIGATION TOP -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Josette Kalifa</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="spectacle.html">Le spectacle</a></li>
+      <li><a href="josette.html">Josette Kalifa</a></li>
+      <li><a href="jean.html">Jean Sommer</a></li>
+      <li><a href="naissance.html">La naissance</a></li>
+      <li><a href="livre.html">La Réparation</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="infos.html" class="nav-cta">Réserver</a></li>
+    </ul>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-bg" style="background-image:url('https://i0.wp.com/www.josettekalifa.com/wp-content/uploads/2025/04/AFCP-12-mars-2024-218RD.jpg?fit=1020%2C685&ssl=1')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-festival">
+        <div class="hero-dot"></div>
+        Festival Off Avignon 2026
+      </div>
+      <div class="hero-pretitle">COMMENT JE SUIS DEVENUE UNE</div>
+      <div class="hero-title">GÉANTE</div>
+      <div class="hero-signature">Josette Kalifa</div>
+      <div class="hero-sub">Texte de Jean Sommer · D'après l'histoire vraie de Josette Kalifa</div>
+      <div class="hero-infos">
+        <div class="hero-info"><i class="ti ti-calendar"></i> 4 – 25 juillet 2026</div>
+        <div class="hero-info"><i class="ti ti-clock"></i> 19h55 · Relâche les lundis</div>
+        <div class="hero-info"><i class="ti ti-map-pin"></i> Atypik Théâtre · Avignon</div>
+      </div>
+      <div class="hero-btns">
+        <a href="infos.html"><button class="btn-rouge-full">Infos pratiques</button></a>
+        <a href="spectacle.html"><button class="btn-ghost">Découvrir</button></a>
+      </div>
+    </div>
+    <!-- Flèche scroll -->
+    <div class="hero-scroll"><i class="ti ti-chevron-down"></i></div>
+  </section>
+
+  <!-- CARTES NAVIGATION (comme ELEVATE) -->
+  <section class="nav-cards-section">
+    <div class="container">
+      <div class="nav-cards">
+        <a href="spectacle.html" class="nav-card">
+          <div class="nav-card-icon"><i class="ti ti-masks-theater"></i></div>
+          <div class="nav-card-title">Le spectacle</div>
+          <div class="nav-card-desc">Synopsis, distribution, témoignages</div>
+          <div class="nav-card-arrow"><i class="ti ti-arrow-right"></i></div>
+        </a>
+        <a href="josette.html" class="nav-card">
+          <div class="nav-card-icon"><i class="ti ti-user"></i></div>
+          <div class="nav-card-title">Josette Kalifa</div>
+          <div class="nav-card-desc">Parcours, artiste, conférencière</div>
+          <div class="nav-card-arrow"><i class="ti ti-arrow-right"></i></div>
+        </a>
+        <a href="jean.html" class="nav-card">
+          <div class="nav-card-icon"><i class="ti ti-feather"></i></div>
+          <div class="nav-card-title">Jean Sommer</div>
+          <div class="nav-card-desc">L'auteur, la rencontre</div>
+          <div class="nav-card-arrow"><i class="ti ti-arrow-right"></i></div>
+        </a>
+        <a href="naissance.html" class="nav-card">
+          <div class="nav-card-icon"><i class="ti ti-sparkles"></i></div>
+          <div class="nav-card-title">La naissance</div>
+          <div class="nav-card-desc">Du livre à la scène</div>
+          <div class="nav-card-arrow"><i class="ti ti-arrow-right"></i></div>
+        </a>
+        <a href="livre.html" class="nav-card">
+          <div class="nav-card-icon"><i class="ti ti-book"></i></div>
+          <div class="nav-card-title">La Réparation</div>
+          <div class="nav-card-desc">Le livre qui a tout inspiré</div>
+          <div class="nav-card-arrow"><i class="ti ti-arrow-right"></i></div>
+        </a>
+        <a href="galerie.html" class="nav-card">
+          <div class="nav-card-icon"><i class="ti ti-photo"></i></div>
+          <div class="nav-card-title">Galerie</div>
+          <div class="nav-card-desc">Le spectacle en images</div>
+          <div class="nav-card-arrow"><i class="ti ti-arrow-right"></i></div>
+        </a>
+        <a href="infos.html" class="nav-card nav-card-rouge">
+          <div class="nav-card-icon"><i class="ti ti-ticket"></i></div>
+          <div class="nav-card-title">Réservation</div>
+          <div class="nav-card-desc">Infos pratiques & contact</div>
+          <div class="nav-card-arrow"><i class="ti ti-arrow-right"></i></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Josette Kalifa</div>
+    <div class="footer-links">
+      <a href="https://www.josettekalifa.com" target="_blank">josettekalifa.com</a>
+      <a href="https://www.linkedin.com/in/josettekalifa/" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.facebook.com/JosetteKalifa" target="_blank"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.instagram.com/josettekalifa/" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.youtube.com/@JosetteKalifa" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Josette Kalifa · Photos © Olivier Monin · © Cyrielle Jacques</div>
+  </footer>
+
+  <script>
+    // Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

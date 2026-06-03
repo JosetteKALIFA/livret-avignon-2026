@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Jean Sommer — L'auteur · Comment je suis devenue une Géante</title>
+  <meta name="description" content="Jean Sommer, coach vocal, auteur et metteur en scène. 2 fois Grand Prix de l'Académie Charles Cros. Auteur du spectacle de Josette Kalifa.">
+  <meta name="theme-color" content="#C40606">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Josette Avignon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Moontime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <!-- BANNIÈRE INSTALLER L'APP -->
+  <div class="install-banner" id="install-banner">
+    <div class="install-banner-left">
+      <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
+      <div>
+        <div class="install-title">Installer le livret</div>
+        <div class="install-sub">Accès rapide depuis votre écran d'accueil</div>
+      </div>
+    </div>
+    <div class="install-banner-right">
+      <button class="install-btn-yes" onclick="installApp()">Installer</button>
+      <button class="install-btn-no" onclick="dismissInstall()"><i class="ti ti-x"></i></button>
+    </div>
+  </div>
+
+  <!-- NAVIGATION TOP -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Josette Kalifa</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="spectacle.html">Le spectacle</a></li>
+      <li><a href="josette.html">Josette Kalifa</a></li>
+      <li><a href="jean.html" class="active" aria-current="page">Jean Sommer</a></li>
+      <li><a href="naissance.html">La naissance</a></li>
+      <li><a href="livre.html">La Réparation</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="infos.html" class="nav-cta">Réserver</a></li>
+    </ul>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </nav>
+
+  <!-- JEAN SOMMER -->
+  <section class="section bg-noir" id="jean">
+    <div class="container">
+      <div class="section-label rouge">Jean Sommer — L'auteur</div>
+      <div class="two-col">
+        <div class="jean-quote-block">
+          <div class="jq-label">Jean Sommer sur le spectacle</div>
+          <div class="jq-text">« Je m'estime chanceux d'avoir croisé la route de Josette Kalifa qui m'a inspiré ce texte. Avec elle je réalise une promesse chère à mon cœur : être auteur et metteur en scène d'un pur moment de beauté. »</div>
+          <div class="jq-suite">« C'est d'après l'histoire vraie de Josette — une rencontre qui nous élève l'un et l'autre. »</div>
+        </div>
+        <div>
+          <div class="jean-avatar">JS</div>
+          <h3 class="jean-name">Jean Sommer</h3>
+          <p class="jean-role">Coach vocal · Auteur · Metteur en scène</p>
+          <p class="body-text gris">Avant de devenir l'un des grands coachs vocaux français, Jean Sommer a été artiste, chanteur, <strong class="blanc">auteur de chansons</strong> — 2 fois Grand Prix de l'Académie Charles Cros, première partie de Georges Brassens et Jean Ferrat.</p>
+          <p class="body-text gris">Il n'a pas écrit ce spectacle inspiré par un livre. Il l'a écrit inspiré par <strong class="blanc">une amitié</strong>. Il a écouté Josette, regardé Josette vivre. Il a vu en elle la grandeur, la douleur, la force, la tendresse, l'humour aussi.</p>
+          <div class="jean-credits">
+            <div class="jean-credit"><i class="ti ti-building"></i> PDG de Disney Paris, Radio France, SNCF, AXA…</div>
+            <div class="jean-credit"><i class="ti ti-radio"></i> Expert voix : Europe 1, RMC, RTL, France Culture</div>
+            <div class="jean-credit"><i class="ti ti-external-link"></i> <a href="https://jean-sommer.fr" target="_blank" class="lien-rouge">jean-sommer.fr</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-nav-cta">
+        <a href="naissance.html"><button class="btn-rouge-full">La naissance du spectacle <i class="ti ti-arrow-right"></i></button></a>
+        <a href="spectacle.html"><button class="btn-ghost">Le spectacle</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Josette Kalifa</div>
+    <div class="footer-links">
+      <a href="https://www.josettekalifa.com" target="_blank">josettekalifa.com</a>
+      <a href="https://www.linkedin.com/in/josettekalifa/" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.facebook.com/JosetteKalifa" target="_blank"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.instagram.com/josettekalifa/" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.youtube.com/@JosetteKalifa" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Josette Kalifa · Photos © Olivier Monin · © Cyrielle Jacques</div>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
