@@ -1349,8 +1349,6 @@ img { max-width: 100%; height: auto; display: block; }
 .two-col-bottom {
   align-items: end;
 }
-
-
 /* ── THÈMES GRILLE ── */
 .themes-grid {
   display: grid;
