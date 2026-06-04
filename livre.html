@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>La Réparation — Le livre qui a tout inspiré · Josette Kalifa</title>
+  <meta name="description" content="La Réparation de Josette Kalifa (2022) : le récit, testament philosophique dédié à son fils, à l'origine du spectacle. Disponible 15 €.">
+  <meta name="theme-color" content="#C40606">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Josette Avignon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Moontime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
 
+  <!-- BANNIÈRE INSTALLER L'APP -->
+  <div class="install-banner" id="install-banner">
+    <div class="install-banner-left">
+      <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
+      <div>
+        <div class="install-title">Installer le livret</div>
+        <div class="install-sub">Accès rapide depuis votre écran d'accueil</div>
+      </div>
+    </div>
+    <div class="install-banner-right">
+      <button class="install-btn-yes" onclick="installApp()">Installer</button>
+      <button class="install-btn-no" onclick="dismissInstall()"><i class="ti ti-x"></i></button>
+    </div>
+  </div>
+
+  <!-- NAVIGATION TOP -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Josette Kalifa</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="spectacle.html">Le spectacle</a></li>
+      <li><a href="josette.html">Josette Kalifa</a></li>
+      <li><a href="jean.html">Jean Sommer</a></li>
+      <li><a href="naissance.html">La naissance</a></li>
+      <li><a href="livre.html" class="active" aria-current="page">La Réparation</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="infos.html" class="nav-cta">Réserver</a></li>
+    </ul>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </nav>
+
+  <!-- LA RÉPARATION -->
+  <section class="section bg-noir" id="livre">
+    <div class="container">
+      <div class="section-label rouge">La Réparation — Le livre qui a tout inspiré</div>
+      <div class="livre-grid">
+        <div class="livre-cover">
+          <img src="images/la-reparation-couverture.png" alt="La Réparation — Josette Kalifa © Cyrielle Jacques" loading="lazy">
+          <div class="livre-credit">© Cyrielle Jacques</div>
+        </div>
+        <div>
+          <h2 class="livre-titre">La Réparation</h2>
+          <div id="livre-auteur" class="livre-auteur"></div>
+          <div id="livre-texte" class="body-text gris italic"></div>
+          <div class="livre-lien-block" id="livre-lien-block"></div>
+          <div class="livre-badge-spectacle">
+            <i class="ti ti-masks-theater"></i>
+            Ce récit a inspiré le spectacle <em>Comment je suis devenue une Géante</em> — texte de Jean Sommer — Festival d'Avignon 2026
+          </div>
+        </div>
+      </div>
+      <div class="page-nav-cta">
+        <a href="infos.html"><button class="btn-rouge-full">Infos & réservation <i class="ti ti-arrow-right"></i></button></a>
+        <a href="naissance.html"><button class="btn-ghost">La naissance du spectacle</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Josette Kalifa</div>
+    <div class="footer-links">
+      <a href="https://www.josettekalifa.com" target="_blank">josettekalifa.com</a>
+      <a href="https://www.linkedin.com/in/josettekalifa/" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.facebook.com/JosetteKalifa" target="_blank"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.instagram.com/josettekalifa/" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.youtube.com/@JosetteKalifa" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Josette Kalifa · Photos © Olivier Monin · © Cyrielle Jacques</div>
+  </footer>
+
+  <script>
+    fetch('/content/livre.json')
+      .then(r => r.json())
+      .then(data => {
+
+        // Auteur et prix
+        document.getElementById('livre-auteur').textContent =
+          `Josette Kalifa · Auto-édition · Janvier 2022 · ${data.prix}`;
+
+        // Texte : paragraphes séparés par \n\n
+        const paragraphes = data.texte.split('\n\n');
+        document.getElementById('livre-texte').innerHTML = paragraphes
+          .map(p => `<p>${p}</p>`).join('');
+
+        // Bouton commande
+        document.getElementById('livre-lien-block').innerHTML = `
+          <a href="${data.lien_bod}" target="_blank">
+            <button class="btn-rouge-full"><i class="ti ti-shopping-cart"></i> Commander — ${data.prix}</button>
+          </a>
+          <div class="livre-dispo">Disponible sur BOD et josettekalifa.com</div>
+        `;
+      });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
