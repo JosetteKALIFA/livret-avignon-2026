@@ -1315,3 +1315,33 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 420px) {
   .galerie-grid { grid-template-columns: 1fr; }
 }
+/* ── ENCARTS 4 THÈMES ── */
+.encarts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.encart-card {
+  background: rgba(196,6,6,0.12);
+  border: 1px solid rgba(196,6,6,0.35);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.encart-titre {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--rouge);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.encart-texte {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: var(--gris);
+  line-height: 1.65;
+}
