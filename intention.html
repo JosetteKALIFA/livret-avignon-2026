@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Note d'intention — Comment je suis devenue une Géante · Josette Kalifa</title>
+  <meta name="description" content="Note d'intention du spectacle Comment je suis devenue une Géante — Josette Kalifa, Festival d'Avignon 2026.">
+  <meta name="theme-color" content="#C40606">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Josette Avignon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Moontime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <div class="install-banner" id="install-banner">
+    <div class="install-banner-left">
+      <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
+      <div>
+        <div class="install-title">Installer le livret</div>
+        <div class="install-sub">Accès rapide depuis votre écran d'accueil</div>
+      </div>
+    </div>
+    <div class="install-banner-right">
+      <button class="install-btn-yes" onclick="installApp()">Installer</button>
+      <button class="install-btn-no" onclick="dismissInstall()"><i class="ti ti-x"></i></button>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Josette Kalifa</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="spectacle.html">Le spectacle</a></li>
+      <li><a href="josette.html">Josette Kalifa</a></li>
+      <li><a href="jean.html">Jean Sommer</a></li>
+      <li><a href="naissance.html">La naissance</a></li>
+      <li><a href="livre.html">La Réparation</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="infos.html" class="nav-cta">Réserver</a></li>
+    </ul>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </nav>
+
+  <section class="section bg-noir" id="intention">
+    <div class="container">
+
+      <!-- BOUTON RETOUR -->
+      <a href="spectacle.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'League Spartan',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2.5rem;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">
+        <i class="ti ti-arrow-left"></i> Retour au spectacle
+      </a>
+
+      <div class="section-label rouge">Note d'intention</div>
+
+      <div class="two-col">
+        <div>
+          <div class="citation-inline" style="margin-bottom:1.75rem">
+            <div class="ci-barre"></div>
+            <div>
+              <div class="ci-text">« Je suis devenue géante le jour où j'ai osé prendre ma place. »</div>
+              <div class="ci-auteur">— Josette Kalifa</div>
+            </div>
+          </div>
+          <p class="body-text gris">Pendant longtemps, Josette Kalifa a cru que sa petite taille était un obstacle, une limite, une honte à porter. Puis la voix est arrivée. La scène aussi. Et avec elles, la possibilité de transformer une blessure en puissance, une différence en singularité, une fragilité en force.</p>
+          <p class="body-text gris"><strong class="blanc">Comment je suis devenue une géante</strong> est né de cette traversée. Il parle du regard des autres, de la honte, de la colère, du rejet mais aussi de la joie de vivre, de l'humour, de la musique, des rencontres et de la réparation.</p>
+          <p class="body-text gris">L'intention n'est pas de raconter une vie pour susciter la compassion. L'intention est de faire entendre une voix qui s'est longtemps cherchée, puis trouvée.</p>
+          <p class="body-text gris">Une voix qui dit : il n'est jamais trop tard pour prendre sa place. Il n'est jamais trop tard pour se relever. Il n'est jamais trop tard pour devenir plus grand que ce que la vie semblait avoir prévu pour nous.</p>
+          <p class="body-text gris">Avec sincérité, énergie et humour, Josette Kalifa propose un moment de théâtre vivant, sensible et lumineux — une expérience qui parle à chacun, parce qu'elle touche à cette question essentielle : <em>comment habiter pleinement qui l'on est ?</em></p>
+        </div>
+        <div>
+          <h3 class="section-title blanc" style="font-size:1.5rem;margin-bottom:1.5rem">Universel <span class="rouge">&amp; singulier</span></h3>
+          <p class="body-text gris">Ce n'est pas seulement un spectacle sur la petite taille. <strong class="blanc">C'est un spectacle sur la place que chacun cherche à prendre dans le monde.</strong></p>
+          <p class="body-text gris">Josette Kalifa ne raconte pas seulement son histoire, elle ouvre un espace dans lequel chacun peut reconnaître quelque chose de lui-même. On y parle de résilience, mais sans discours figé. De courage, mais sans héroïsme inaccessible. De différence, mais sans victimisation.</p>
+        </div>
+      </div>
+
+      <div class="page-nav-cta">
+        <a href="spectacle.html"><button class="btn-ghost"><i class="ti ti-arrow-left"></i> Retour au spectacle</button></a>
+        <a href="themes.html"><button class="btn-rouge-full">Les thèmes du spectacle <i class="ti ti-arrow-right"></i></button></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Josette Kalifa</div>
+    <div class="footer-links">
+      <a href="https://www.josettekalifa.com" target="_blank">josettekalifa.com</a>
+      <a href="https://www.linkedin.com/in/josettekalifa/" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.facebook.com/JosetteKalifa" target="_blank"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.instagram.com/josettekalifa/" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.youtube.com/@JosetteKalifa" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Josette Kalifa · Photos © Olivier Monin · © Cyrielle Jacques</div>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
