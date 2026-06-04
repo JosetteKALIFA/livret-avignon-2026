@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Le spectacle — Comment je suis devenue une Géante · Josette Kalifa</title>
+  <meta name="description" content="Un seule en scène entre théâtre et art vocal — synopsis, distribution et témoignages du spectacle de Josette Kalifa, Festival d'Avignon 2026.">
+  <meta name="theme-color" content="#C40606">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Josette Avignon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Moontime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
 
+  <div class="install-banner" id="install-banner">
+    <div class="install-banner-left">
+      <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
+      <div>
+        <div class="install-title">Installer le livret</div>
+        <div class="install-sub">Accès rapide depuis votre écran d'accueil</div>
+      </div>
+    </div>
+    <div class="install-banner-right">
+      <button class="install-btn-yes" onclick="installApp()">Installer</button>
+      <button class="install-btn-no" onclick="dismissInstall()"><i class="ti ti-x"></i></button>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Josette Kalifa</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="spectacle.html" class="active" aria-current="page">Le spectacle</a></li>
+      <li><a href="josette.html">Josette Kalifa</a></li>
+      <li><a href="jean.html">Jean Sommer</a></li>
+      <li><a href="naissance.html">La naissance</a></li>
+      <li><a href="livre.html">La Réparation</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="infos.html" class="nav-cta">Réserver</a></li>
+    </ul>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </nav>
+
+  <section class="section bg-noir" id="spectacle">
+    <div class="container">
+
+      <!-- SYNOPSIS + ENCARTS -->
+      <div class="section-label rouge">Le spectacle</div>
+      <div class="two-col two-col-bottom">
+        <div>
+          <h2 class="section-title blanc">Un seule en scène<br><span class="rouge">entre théâtre et art vocal</span></h2>
+          <div id="synopsis-text" class="body-text gris"></div>
+          <div class="distrib">
+            <div class="distrib-card">
+              <div class="dc-role">Sur scène</div>
+              <div class="dc-name">Josette Kalifa</div>
+            </div>
+            <div class="distrib-card">
+              <div class="dc-role">Texte & mise en scène</div>
+              <div class="dc-name">Jean Sommer</div>
+            </div>
+          </div>
+        </div>
+        <div class="encarts-grid" id="encarts-grid"></div>
+      </div>
+
+      <!-- TÉMOIGNAGES -->
+      <div class="section-label rouge" style="margin-top:3rem">Ce qu'ils en disent</div>
+      <div class="temos-grid" id="temos-grid"></div>
+
+      <!-- BOUTONS NAVIGATION -->
+      <div class="page-nav-cta">
+        <a href="intention.html"><button class="btn-ghost">Note d'intention <i class="ti ti-arrow-right"></i></button></a>
+        <a href="themes.html"><button class="btn-ghost">Les thèmes <i class="ti ti-arrow-right"></i></button></a>
+        <a href="josette.html"><button class="btn-rouge-full">Découvrir Josette Kalifa <i class="ti ti-arrow-right"></i></button></a>
+        <a href="infos.html"><button class="btn-ghost">Infos pratiques</button></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Josette Kalifa</div>
+    <div class="footer-links">
+      <a href="https://www.josettekalifa.com" target="_blank">josettekalifa.com</a>
+      <a href="https://www.linkedin.com/in/josettekalifa/" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.facebook.com/JosetteKalifa" target="_blank"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.instagram.com/josettekalifa/" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.youtube.com/@JosetteKalifa" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Josette Kalifa · Photos © Olivier Monin · © Cyrielle Jacques</div>
+  </footer>
+
+  <script>
+    fetch('/content/spectacle.json')
+      .then(r => r.json())
+      .then(data => {
+
+        // Synopsis
+        const paragraphes = data.synopsis.split('\n\n');
+        document.getElementById('synopsis-text').innerHTML = paragraphes
+          .map(p => `<p>${p}</p>`).join('');
+
+        // Encarts colonne droite
+        if (data.encarts && data.encarts.length > 0) {
+          document.getElementById('encarts-grid').innerHTML = data.encarts.map(e => `
+            <div class="encart-card">
+              <div class="encart-titre">${e.titre}</div>
+              <div class="encart-texte">${e.texte}</div>
+            </div>
+          `).join('');
+        }
+
+        // Témoignages — Vttgirl en premier puis les autres
+        const tousLesTemos = [
+          {
+            texte: "Un spectacle en forme d'éclosion ! La vie d'une femme cabossée et qui émeut, tout en montagnes russes d'émotions — on vit, on souffre, on rit et on grandit avec elle.",
+            auteur: "Vttgirl · BilletRéduc"
+          },
+          ...data.temoignages
+        ];
+        document.getElementById('temos-grid').innerHTML = tousLesTemos.map(t => `
+          <div class="temo-card">
+            <div class="temo-stars">★★★★★</div>
+            <div class="temo-text">« ${t.texte} »</div>
+            <div class="temo-author">${t.auteur}</div>
+          </div>
+        `).join('');
+      });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
