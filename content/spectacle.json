@@ -1,1 +1,39 @@
-
+{
+  "synopsis": "C'est l'histoire d'une femme qui mesure 1m40 et qui a décidé de devenir une géante. Par la rage d'abord. Puis par des rencontres décisives qui changent tout. Et un chemin qu'elle a dû inventer.\n\nSur scène Josette Kalifa nous embarque là où on ne s'y attend pas. On rit d'abord. Puis on se tait. Puis on réalise qu'elle parle de nous, de la différence que chacun porte, du courage qu'il faut pour se relever quand personne ne vous voit, de ce qu'on peut encore décider, même tard. Même blessé.\n\nAvec une voix qui bouleverse autant qu'elle enchante, elle transforme la douleur en lumière et l'humour arrive après la tension, comme une grâce.\n\nOn repart différent. Un peu plus fort. Un peu plus grand.",
+  "encarts": [
+    {
+      "titre": "Récit intime",
+      "texte": "Une traversée de vie racontée avec sincérité, sans faux-semblant ni pathos."
+    },
+    {
+      "titre": "Humour & émotion",
+      "texte": "Le rire arrive au bon moment. La tendresse circule. L'émotion ne submerge jamais."
+    },
+    {
+      "titre": "Chanson & voix",
+      "texte": "La voix ouvre des espaces inattendus. Elle guérit. Elle libère. Elle transporte."
+    },
+    {
+      "titre": "Transmission",
+      "texte": "Un moment suspendu, profondément humain, qui résonne longtemps après le rideau."
+    }
+  ],
+  "temoignages": [
+    {
+      "texte": "Un torrent d'émotions. Josette nous invite à explorer son univers avec une telle intensité que chaque spectateur se retrouve transformé et plus riche de l'intérieur.",
+      "auteur": "Voyagevoyage · BilletRéduc"
+    },
+    {
+      "texte": "Un spectacle qui vous prend à la gorge et vous donne envie de rire et de pleurer à la fois. Poétique, bouleversant.",
+      "auteur": "EMM2 · BilletRéduc"
+    },
+    {
+      "texte": "Elle m'a emporté ! J'ai pleuré, ri, vécu l'histoire avec elle. Je recommande à 1000 %.",
+      "auteur": "Céline · BilletRéduc"
+    },
+    {
+      "texte": "Absolument magnifique et bouleversant d'émotion. Josette Kalifa nous fait grandir.",
+      "auteur": "Michaël Aguilar · Conférencier"
+    }
+  ]
+}
