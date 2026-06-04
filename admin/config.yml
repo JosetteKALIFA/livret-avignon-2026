@@ -29,6 +29,12 @@ collections:
         format: json
         fields:
           - {label: "Synopsis", name: "synopsis", widget: "text"}
+          - label: "Encarts thématiques"
+            name: "encarts"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "titre", widget: "string"}
+              - {label: "Texte", name: "texte", widget: "text"}
           - label: "Témoignages"
             name: "temoignages"
             widget: "list"
