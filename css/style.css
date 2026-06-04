@@ -1349,52 +1349,7 @@ img { max-width: 100%; height: auto; display: block; }
 .two-col-bottom {
   align-items: end;
 }
-/* ── ACCORDÉON ── */
-.accordion {
-  border: 1px solid rgba(196,6,6,0.25);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
 
-.accordion-btn {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 1.5rem;
-  background: rgba(196,6,6,0.08);
-  border: none;
-  color: var(--blanc);
-  cursor: pointer;
-  font-family: 'League Spartan', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-align: left;
-  transition: background 0.2s;
-}
-
-.accordion-btn:hover { background: rgba(196,6,6,0.15); }
-
-.accordion-icon {
-  font-size: 20px;
-  color: var(--rouge);
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 1.5rem;
-}
-
-.accordion-body.open {
-  max-height: 2000px;
-  padding: 0 1.5rem 1.75rem;
-}
 
 /* ── THÈMES GRILLE ── */
 .themes-grid {
