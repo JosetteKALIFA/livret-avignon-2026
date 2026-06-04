@@ -1315,3 +1315,40 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 420px) {
   .galerie-grid { grid-template-columns: 1fr; }
 }
+/* ── ENCARTS 4 THÈMES ── */
+.encarts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.encart-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(196,6,6,0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.encart-titre {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #C40606;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.encart-texte {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .encarts-grid {
+    grid-template-columns: 1fr;
+  }
+}
