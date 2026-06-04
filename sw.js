@@ -1,4 +1,4 @@
-const CACHE = 'josette-avignon-2026060417';
+const CACHE = 'josette-avignon-2026060422';
 const ASSETS = [
   '/', '/index.html',
   '/spectacle.html', '/josette.html', '/jean.html',
