@@ -18,8 +18,6 @@
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-
-  <!-- BANNIÈRE INSTALLER L'APP -->
   <div class="install-banner" id="install-banner">
     <div class="install-banner-left">
       <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
@@ -33,7 +31,75 @@
       <button class="install-btn-no" onclick="dismissInstall()"><i class="ti ti-x"></i></button>
     </div>
   </div>
-
-  <!-- NAVIGATION TOP -->
   <nav class="nav">
-    <a href="index.html" class="nav-l
+    <a href="index.html" class="nav-logo">Josette Kalifa</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="spectacle.html">Le spectacle</a></li>
+      <li><a href="josette.html">Josette Kalifa</a></li>
+      <li><a href="jean.html">Jean Sommer</a></li>
+      <li><a href="naissance.html" class="active" aria-current="page">La naissance</a></li>
+      <li><a href="livre.html">La Réparation</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="infos.html" class="nav-cta">Réserver</a></li>
+    </ul>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </nav>
+  <section class="section bg-sombre" id="naissance">
+    <div class="container">
+      <div class="section-label rouge">Naissance d'un seule en scène</div>
+      <div class="two-col">
+        <div>
+          <h2 class="section-title blanc">De la page<br><span class="rouge">à la lumière</span></h2>
+          <div id="naissance-intro" class="body-text gris"></div>
+          <div class="timeline" id="naissance-timeline"></div>
+        </div>
+        <div class="photo-naissance">
+          <img src="images/josette-jean-sommer.jpg" alt="Josette Kalifa et Jean Sommer — première du spectacle, 12 mars 2024 © Olivier Monin" loading="lazy">
+          <div class="photo-caption">Première représentation · 12 mars 2024 · © Olivier Monin Photography</div>
+        </div>
+      </div>
+      <div class="page-nav-cta">
+        <a href="livre.html"><button class="btn-rouge-full">Le livre « La Réparation » <i class="ti ti-arrow-right"></i></button></a>
+        <a href="infos.html"><button class="btn-ghost">Infos pratiques</button></a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-logo">Josette Kalifa</div>
+    <div class="footer-links">
+      <a href="https://www.josettekalifa.com" target="_blank">josettekalifa.com</a>
+      <a href="https://www.linkedin.com/in/josettekalifa/" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.facebook.com/JosetteKalifa" target="_blank"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.instagram.com/josettekalifa/" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.youtube.com/@JosetteKalifa" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Josette Kalifa · Photos © Olivier Monin · © Cyrielle Jacques</div>
+  </footer>
+  <script>
+    fetch('/content/naissance.json')
+      .then(r => r.json())
+      .then(data => {
+        const paragraphes = data.intro.split('\n\n');
+        document.getElementById('naissance-intro').innerHTML = paragraphes
+          .map(p => `<p>${p}</p>`).join('');
+        document.getElementById('naissance-timeline').innerHTML = data.timeline
+          .map(item => `
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div>
+                <div class="tl-year">${item.annee}</div>
+                <div class="tl-event"><strong class="blanc">${item.evenement}</strong></div>
+              </div>
+            </div>
+          `).join('');
+      });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
