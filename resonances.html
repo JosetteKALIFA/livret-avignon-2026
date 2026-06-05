@@ -61,7 +61,6 @@
       <div class="section-label rouge">Pourquoi ce spectacle touche</div>
       <h2 class="section-title blanc">Résonances <span class="rouge">universelles</span></h2>
 
-      <!-- TEXTE INTRO -->
       <p class="body-text gris" style="max-width:800px;margin-bottom:2.5rem">Parce qu'il parle d'un sujet universel : se sentir différent. Différent par son corps, son histoire, son parcours, ses blessures, ses rêves, ses silences ou ses combats. Josette Kalifa ne raconte pas seulement son histoire, elle ouvre un espace dans lequel chacun peut reconnaître quelque chose de lui-même.</p>
 
       <!-- TROIS ENCARTS -->
@@ -93,8 +92,7 @@
             </div>
           </div>
         </div>
-        <div>
-          <!-- EMPLACEMENT PHOTO -->
+        <div id="resonances-photo">
           <div style="width:100%;aspect-ratio:3/4;background:var(--noir-doux);border:1px dashed rgba(255,255,255,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
             <i class="ti ti-camera-plus" style="font-size:32px;color:var(--rouge)"></i>
             <span style="font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;">Photo à venir</span>
@@ -124,6 +122,16 @@
   </footer>
 
   <script>
+    fetch('/content/resonances.json')
+      .then(r => r.json())
+      .then(data => {
+        if (data.photo) {
+          document.getElementById('resonances-photo').innerHTML = `
+            <img src="${data.photo}" alt="Résonances universelles" style="width:100%;border-radius:var(--radius);border:1px solid rgba(255,255,255,.1);">
+          `;
+        }
+      });
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }
