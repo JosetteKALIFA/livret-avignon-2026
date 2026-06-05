@@ -18,6 +18,7 @@
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+
   <div class="install-banner" id="install-banner">
     <div class="install-banner-left">
       <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
@@ -31,6 +32,7 @@
       <button class="install-btn-no" onclick="dismissInstall()"><i class="ti ti-x"></i></button>
     </div>
   </div>
+
   <nav class="nav">
     <a href="index.html" class="nav-logo">Josette Kalifa</a>
     <ul class="nav-links">
@@ -48,13 +50,25 @@
       <i class="ti ti-menu-2"></i>
     </button>
   </nav>
+
   <section class="section bg-noir" id="jean">
     <div class="container">
       <div class="section-label rouge">Jean Sommer — L'auteur</div>
-      <div class="two-col">
-        <div class="jean-quote-block" id="jean-quote-block"></div>
+      <div class="two-col" style="align-items:start">
+
+        <!-- COLONNE GAUCHE : citation + photo grande format -->
         <div>
-          <div id="jean-photo-block"></div>
+          <div class="jean-quote-block" id="jean-quote-block"></div>
+          <div id="jean-photo-block" style="margin-top:1.5rem">
+            <div style="width:100%;aspect-ratio:3/4;background:var(--noir-doux);border:1px dashed rgba(255,255,255,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+              <i class="ti ti-camera-plus" style="font-size:32px;color:var(--rouge)"></i>
+              <span style="font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;">Photo à venir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLONNE DROITE : nom, rôle, texte, crédits -->
+        <div>
           <h3 class="jean-name">Jean Sommer</h3>
           <p class="jean-role">Coach vocal · Auteur · Metteur en scène</p>
           <div id="jean-texte" class="body-text gris"></div>
@@ -65,12 +79,14 @@
           </div>
         </div>
       </div>
+
       <div class="page-nav-cta">
         <a href="naissance.html"><button class="btn-rouge-full">La naissance du spectacle <i class="ti ti-arrow-right"></i></button></a>
         <a href="spectacle.html"><button class="btn-ghost">Le spectacle</button></a>
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="footer-logo">Josette Kalifa</div>
     <div class="footer-links">
@@ -82,24 +98,32 @@
     </div>
     <div class="footer-copy">© 2026 Josette Kalifa · Photos © Olivier Monin · © Cyrielle Jacques</div>
   </footer>
+
   <script>
     fetch('/content/jean.json')
       .then(r => r.json())
       .then(data => {
+
+        // Citation
         document.getElementById('jean-quote-block').innerHTML = `
           <div class="jq-label">Jean Sommer sur le spectacle</div>
           <div class="jq-text">« ${data.citation} »</div>
         `;
+
+        // Photo grande format ou emplacement vide
         const photoBlock = document.getElementById('jean-photo-block');
         if (data.photo) {
-          photoBlock.innerHTML = `<img src="${data.photo}" alt="Jean Sommer" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:1rem;">`;
-        } else {
-          photoBlock.innerHTML = `<div class="jean-avatar">JS</div>`;
+          photoBlock.innerHTML = `
+            <img src="${data.photo}" alt="Jean Sommer" style="width:100%;border-radius:var(--radius);border:1px solid rgba(255,255,255,.1);">
+          `;
         }
+
+        // Texte
         const paragraphes = data.texte.split('\n\n');
         document.getElementById('jean-texte').innerHTML = paragraphes
           .map(p => `<p>${p}</p>`).join('');
       });
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }
