@@ -21,5 +21,10 @@
       "legende": "Premiers pas \"chanter dans la rue\""
     }
   ],
-  "videos": []
+  "videos": [
+    {
+      "url": "https://www.youtube.com/embed/x2aJTSq3k_I",
+      "legende": "Spectacle conférence à Noschool Bordeaux - octobre 2025"
+    }
+  ]
 }
