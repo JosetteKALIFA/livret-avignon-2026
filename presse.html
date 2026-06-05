@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Moontime&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="https://identity.netlify.com/v1/netlify-identity.js"></script>
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -56,25 +56,39 @@
 
       <div class="section-label rouge">Pour les journalistes & programmateurs</div>
       <h2 class="section-title blanc">Angles <span class="rouge">presse</span></h2>
-      <p class="body-text gris" style="max-width:800px;margin-bottom:2.5rem">Le spectacle offre une multitude d'entrées éditoriales, aussi bien pour la presse culturelle et théâtrale que pour les médias généralistes. Chaque angle révèle une facette différente du spectacle.</p>
 
-      <!-- 4 ANGLES -->
-      <div class="themes-grid" style="grid-template-columns:repeat(2,1fr);margin-bottom:3rem">
-        <div class="encart-card">
-          <div class="encart-titre"><i class="ti ti-eye" aria-hidden="true"></i> La différence comme force scénique</div>
-          <div class="encart-texte">Une femme d'1m40 qui transforme sa singularité physique en puissance artistique et en présence irrésistible sur scène.</div>
+      <!-- PHOTO GAUCHE + TEXTE DROITE -->
+      <div class="two-col" style="align-items:start;margin-bottom:2.5rem">
+
+        <!-- COLONNE GAUCHE : photo -->
+        <div id="presse-photo">
+          <div style="width:100%;aspect-ratio:3/4;background:var(--noir-doux);border:1px dashed rgba(255,255,255,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+            <i class="ti ti-camera-plus" style="font-size:32px;color:var(--rouge)"></i>
+            <span style="font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;">Photo à venir</span>
+          </div>
         </div>
-        <div class="encart-card">
-          <div class="encart-titre"><i class="ti ti-microphone" aria-hidden="true"></i> La voix comme outil de réparation</div>
-          <div class="encart-texte">Comment la chanson et le récit peuvent devenir un chemin de guérison intérieure. Un angle fort pour les médias culture & bien-être.</div>
-        </div>
-        <div class="encart-card">
-          <div class="encart-titre"><i class="ti ti-user" aria-hidden="true"></i> Josette Kalifa à 73 ans</div>
-          <div class="encart-texte">L'énergie d'une artiste qui n'a jamais cessé de grandir — un portrait bouleversant sur le temps, l'âge et la création.</div>
-        </div>
-        <div class="encart-card">
-          <div class="encart-titre"><i class="ti ti-masks-theater" aria-hidden="true"></i> Un seule en scène lumineux, sans pathos</div>
-          <div class="encart-texte">Quand le théâtre parle de différence autrement. Un spectacle qui fait rire autant qu'il émeut, sans jamais tomber dans la victimisation.</div>
+
+        <!-- COLONNE DROITE : paragraphe + 4 encarts -->
+        <div>
+          <p class="body-text gris" style="margin-bottom:2rem">Le spectacle offre une multitude d'entrées éditoriales, aussi bien pour la presse culturelle et théâtrale que pour les médias généralistes. Chaque angle révèle une facette différente du spectacle.</p>
+          <div style="display:flex;flex-direction:column;gap:1rem">
+            <div class="encart-card">
+              <div class="encart-titre"><i class="ti ti-eye" aria-hidden="true"></i> La différence comme force scénique</div>
+              <div class="encart-texte">Une femme d'1m40 qui transforme sa singularité physique en puissance artistique et en présence irrésistible sur scène.</div>
+            </div>
+            <div class="encart-card">
+              <div class="encart-titre"><i class="ti ti-microphone" aria-hidden="true"></i> La voix comme outil de réparation</div>
+              <div class="encart-texte">Comment la chanson et le récit peuvent devenir un chemin de guérison intérieure. Un angle fort pour les médias culture & bien-être.</div>
+            </div>
+            <div class="encart-card">
+              <div class="encart-titre"><i class="ti ti-user" aria-hidden="true"></i> Josette Kalifa à 73 ans</div>
+              <div class="encart-texte">L'énergie d'une artiste qui n'a jamais cessé de grandir — un portrait bouleversant sur le temps, l'âge et la création.</div>
+            </div>
+            <div class="encart-card">
+              <div class="encart-titre"><i class="ti ti-masks-theater" aria-hidden="true"></i> Un seule en scène lumineux, sans pathos</div>
+              <div class="encart-texte">Quand le théâtre parle de différence autrement. Un spectacle qui fait rire autant qu'il émeut, sans jamais tomber dans la victimisation.</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -118,6 +132,16 @@
   </footer>
 
   <script>
+    fetch('/content/presse.json')
+      .then(r => r.json())
+      .then(data => {
+        if (data.photo) {
+          document.getElementById('presse-photo').innerHTML = `
+            <img src="${data.photo}" alt="Angles presse" style="width:100%;border-radius:var(--radius);border:1px solid rgba(255,255,255,.1);">
+          `;
+        }
+      });
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }
