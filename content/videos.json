@@ -1,8 +1,12 @@
 {
   "videos": [
     {
-      "url": "https://www.youtube.com/embed/HTH3ibM9k5g",
-      "legende": "Représentation octobre 2025 - Théâtre de l'Ile Saint Louis- Paris"
+      "url": "https://youtu.be/QxDiGkuLloQ?si=zz6mPUJFrbquvIFb",
+      "legende": "Ils ont vu le spectacle et voici ce qu'ils en disent"
+    },
+    {
+      "url": "https://www.youtube.com/embed/QxDiGkuLloQ",
+      "legende": "Pitch de Comment je suis devenue une géante - également proposé en conférence"
     }
   ]
 }
