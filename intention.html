@@ -68,7 +68,9 @@
             <div style="font-family:'Montserrat',sans-serif; font-size:16px; font-weight:300; font-style:italic; color:#fff; line-height:1.7; margin-bottom:8px;">« Je suis devenue géante le jour où j'ai osé prendre ma place. »</div>
             <div style="font-size:12px; font-weight:600; color:rgba(255,255,255,0.7); letter-spacing:.06em;">— Josette Kalifa</div>
           </div>
+          <div id="intention-photo" style="margin-top:1.5rem"></div>
         </div>
+        
 
         <!-- COLONNE DROITE : tout le texte dans l'ordre -->
         <div>
@@ -102,6 +104,15 @@
   </footer>
 
   <script>
+    fetch('/content/intention.json')
+  .then(r => r.json())
+  .then(data => {
+    if (data.photo) {
+      document.getElementById('intention-photo').innerHTML = `
+        <img src="${data.photo}" alt="Note d'intention" style="width:100%;border-radius:var(--radius);border:1px solid rgba(255,255,255,.1);">
+      `;
+    }
+  });
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }
