@@ -109,3 +109,32 @@ collections:
             fields:
               - {label: "URL YouTube embed", name: "url", widget: "string", hint: "Format: https://www.youtube.com/embed/IDENTIFIANT"}
               - {label: "Légende", name: "legende", widget: "string"}
+              - name: "intention"
+    label: "📝 Note d'intention"
+    files:
+      - label: "Photo"
+        name: "intention"
+        file: "content/intention.json"
+        format: json
+        fields:
+          - {label: "Photo", name: "photo", widget: "image", required: false}
+
+  - name: "resonances"
+    label: "✨ Résonances universelles"
+    files:
+      - label: "Photo"
+        name: "resonances"
+        file: "content/resonances.json"
+        format: json
+        fields:
+          - {label: "Photo", name: "photo", widget: "image", required: false}
+
+  - name: "presse"
+    label: "📰 Angles presse"
+    files:
+      - label: "Photo"
+        name: "presse"
+        file: "content/presse.json"
+        format: json
+        fields:
+          - {label: "Photo", name: "photo", widget: "image", required: false}
