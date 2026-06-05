@@ -5,7 +5,7 @@ media_folder: "images"
 public_folder: "/images"
 locale: 'fr'
 collections:
- - name: "infos_pratiques"
+  - name: "infos_pratiques"
     label: "📅 Infos pratiques & dates"
     files:
       - label: "Informations du spectacle"
@@ -116,7 +116,7 @@ collections:
             fields:
               - {label: "URL YouTube embed", name: "url", widget: "string", hint: "Format: https://www.youtube.com/embed/IDENTIFIANT"}
               - {label: "Légende", name: "legende", widget: "string"}
-              - name: "intention"
+  - name: "intention"
     label: "📝 Note d'intention"
     files:
       - label: "Photo"
@@ -125,7 +125,6 @@ collections:
         format: json
         fields:
           - {label: "Photo", name: "photo", widget: "image", required: false}
-
   - name: "resonances"
     label: "✨ Résonances universelles"
     files:
@@ -135,7 +134,6 @@ collections:
         format: json
         fields:
           - {label: "Photo", name: "photo", widget: "image", required: false}
-
   - name: "presse"
     label: "📰 Angles presse"
     files:
@@ -145,3 +143,18 @@ collections:
         format: json
         fields:
           - {label: "Photo", name: "photo", widget: "image", required: false}
+  - name: "videos"
+    label: "🎬 Vidéos"
+    files:
+      - label: "Vidéos du spectacle"
+        name: "videos"
+        file: "content/videos.json"
+        format: json
+        fields:
+          - label: "Vidéos"
+            name: "videos"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "URL YouTube embed", name: "url", widget: "string", hint: "Format: https://www.youtube.com/embed/IDENTIFIANT"}
+              - {label: "Légende", name: "legende", widget: "string"}
