@@ -5,7 +5,7 @@ media_folder: "images"
 public_folder: "/images"
 locale: 'fr'
 collections:
-  - name: "infos_pratiques"
+ - name: "infos_pratiques"
     label: "📅 Infos pratiques & dates"
     files:
       - label: "Informations du spectacle"
@@ -20,6 +20,13 @@ collections:
           - {label: "Adresse", name: "adresse", widget: "string"}
           - {label: "Téléphone", name: "telephone", widget: "string"}
           - {label: "Lien de réservation", name: "lien_resa", widget: "string", required: false, hint: "Laisser vide si pas encore disponible"}
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "URL ou chemin de la photo", name: "url", widget: "image"}
+              - {label: "Légende", name: "legende", widget: "string"}
   - name: "spectacle"
     label: "🎭 Le spectacle"
     files:
