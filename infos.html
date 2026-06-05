@@ -19,7 +19,6 @@
 </head>
 <body>
 
-  <!-- BANNIÈRE INSTALLER L'APP -->
   <div class="install-banner" id="install-banner">
     <div class="install-banner-left">
       <div class="install-icon"><i class="ti ti-device-mobile"></i></div>
@@ -34,7 +33,6 @@
     </div>
   </div>
 
-  <!-- NAVIGATION TOP -->
   <nav class="nav">
     <a href="index.html" class="nav-logo">Josette Kalifa</a>
     <ul class="nav-links">
@@ -53,17 +51,91 @@
     </button>
   </nav>
 
-  <!-- INFOS PRATIQUES -->
   <section class="section bg-sombre" id="infos">
     <div class="container">
       <div class="section-label rouge">Informations pratiques</div>
-      <div class="infos-grid" id="infos-grid">
-        <!-- Rempli dynamiquement -->
+
+      <!-- DEUX COLONNES COMME LE PDF -->
+      <div class="two-col" style="align-items:start;margin-bottom:2.5rem">
+
+        <!-- COLONNE GAUCHE : Le spectacle + Lieu -->
+        <div>
+          <h3 style="font-family:'League Spartan',sans-serif;font-size:1.2rem;font-weight:700;color:var(--blanc);margin-bottom:1.25rem">Le spectacle</h3>
+          <table style="width:100%;border-collapse:collapse;margin-bottom:2rem">
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0;width:35%">Titre</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0">Comment je suis devenue une géante</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0">Artiste</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0">Josette Kalifa</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0">Genre</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0">Seule en scène / récit musical / théâtre inspirant</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0">Durée</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0">50 minutes</td>
+            </tr>
+            <tr>
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0">Texte</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0">Jean Sommer, inspiré de <em>La Réparation</em></td>
+            </tr>
+          </table>
+
+          <h3 style="font-family:'League Spartan',sans-serif;font-size:1.2rem;font-weight:700;color:var(--blanc);margin-bottom:1rem">Lieu</h3>
+          <p style="font-size:15px;font-weight:700;color:var(--blanc);margin-bottom:4px" id="infos-lieu"></p>
+          <p style="font-size:14px;color:var(--gris)" id="infos-adresse"></p>
+        </div>
+
+        <!-- COLONNE DROITE : Dates & billetterie + Contact -->
+        <div>
+          <h3 style="font-family:'League Spartan',sans-serif;font-size:1.2rem;font-weight:700;color:var(--blanc);margin-bottom:1.25rem">Dates & billetterie</h3>
+          <table style="width:100%;border-collapse:collapse;margin-bottom:2rem">
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0;width:35%">Festival</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0">Off Avignon 2026</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0">Dates</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0" id="infos-dates"></td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0">Horaire</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0" id="infos-horaire"></td>
+            </tr>
+            <tr>
+              <td style="font-size:13px;font-weight:700;color:var(--rouge);padding:.75rem 1rem .75rem 0">Billetterie</td>
+              <td style="font-size:14px;color:var(--gris);padding:.75rem 0" id="infos-billetterie"></td>
+            </tr>
+          </table>
+
+          <h3 style="font-family:'League Spartan',sans-serif;font-size:1.2rem;font-weight:700;color:var(--blanc);margin-bottom:1rem">Contact</h3>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:1.5rem">
+            <p style="font-size:15px;font-weight:700;color:var(--blanc)">Josette Kalifa</p>
+            <p style="font-size:14px;color:var(--gris)"><i class="ti ti-mail" style="color:var(--rouge);margin-right:8px"></i>josettekalifa@gmail.com</p>
+            <p style="font-size:14px;color:var(--gris)"><i class="ti ti-phone" style="color:var(--rouge);margin-right:8px"></i>06 30 68 36 90</p>
+            <p style="font-size:14px;color:var(--gris)"><i class="ti ti-world" style="color:var(--rouge);margin-right:8px"></i><a href="https://www.josettekalifa.com" target="_blank" class="lien-rouge">www.josettekalifa.com</a></p>
+          </div>
+
+          <div style="background:rgba(0,74,173,.1);border:1px solid rgba(0,74,173,.3);border-radius:var(--radius);padding:1rem 1.25rem">
+            <p style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.6"><i class="ti ti-info-circle" style="color:#004AAD;margin-right:8px"></i>Photos (scène, portraits, affiche, visuels de communication, couverture du livre <em>La Réparation</em>) disponibles sur demande.</p>
+          </div>
+        </div>
       </div>
-      <div class="resa-band" id="resa-band">
-        <!-- Rempli dynamiquement -->
+
+      <!-- BOUTON RÉSERVATION -->
+      <div class="resa-band" id="resa-band" style="margin-bottom:1rem"></div>
+
+      <!-- GALERIE PHOTOS -->
+      <div id="infos-galerie-section" style="display:none;margin-top:2rem">
+        <div class="section-label rouge">Photos</div>
+        <div class="galerie-grid" id="infos-galerie"></div>
       </div>
-      <div class="presse-band">
+
+      <!-- CONTACT PRESSE -->
+      <div class="presse-band" style="margin-top:1rem">
         <div>
           <div class="presse-title">Presse & partenariats</div>
           <div class="presse-sub">Journalistes, blogueurs, organisateurs — contactez-nous</div>
@@ -72,10 +144,10 @@
           <button class="btn-rouge-full">Nous contacter →</button>
         </a>
       </div>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-logo">Josette Kalifa</div>
     <div class="footer-links">
@@ -93,31 +165,14 @@
       .then(r => r.json())
       .then(data => {
 
-        // Cartes infos
-        document.getElementById('infos-grid').innerHTML = `
-          <div class="info-card">
-            <i class="ti ti-calendar info-icon"></i>
-            <div class="info-label">Dates</div>
-            <div class="info-val">${data.dates}</div>
-          </div>
-          <div class="info-card">
-            <i class="ti ti-clock info-icon"></i>
-            <div class="info-label">Horaire</div>
-            <div class="info-val">${data.horaire}<br>${data.relache}</div>
-          </div>
-          <div class="info-card">
-            <i class="ti ti-map-pin info-icon"></i>
-            <div class="info-label">Lieu</div>
-            <div class="info-val">${data.lieu}<br>${data.adresse}</div>
-          </div>
-          <div class="info-card">
-            <i class="ti ti-phone info-icon"></i>
-            <div class="info-label">Renseignements</div>
-            <div class="info-val">${data.telephone}</div>
-          </div>
-        `;
+        // Remplissage des champs
+        document.getElementById('infos-lieu').textContent = data.lieu;
+        document.getElementById('infos-adresse').textContent = data.adresse;
+        document.getElementById('infos-dates').textContent = data.dates;
+        document.getElementById('infos-horaire').textContent = data.horaire + ' · ' + data.relache;
+        document.getElementById('infos-billetterie').textContent = data.lien_resa ? 'Disponible en ligne' : 'À compléter';
 
-        // Bouton réservation : actif si lien_resa renseigné, sinon "bientôt disponible"
+        // Bouton réservation
         const resaBand = document.getElementById('resa-band');
         if (data.lien_resa) {
           resaBand.innerHTML = `
@@ -137,6 +192,17 @@
             </div>
             <button class="btn-disabled-resa"><i class="ti ti-ticket"></i> Bientôt disponible</button>
           `;
+        }
+
+        // Galerie photos — visible seulement si photos présentes
+        if (data.photos && data.photos.length > 0) {
+          document.getElementById('infos-galerie-section').style.display = 'block';
+          document.getElementById('infos-galerie').innerHTML = data.photos.map(p => `
+            <figure class="galerie-item">
+              <img src="${p.url}" alt="${p.legende}" loading="lazy">
+              <figcaption>${p.legende}</figcaption>
+            </figure>
+          `).join('');
         }
       });
 
