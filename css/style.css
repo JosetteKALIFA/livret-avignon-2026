@@ -98,18 +98,19 @@ img { max-width: 100%; height: auto; display: block; }
   transition: color .2s;
 }
 
-.nav-links a:hover { color: var(--blanc); }
-
 .nav-links a.nav-cta {
-  color: var(--rouge);
+  color: var(--blanc);
+  background: var(--rouge);
   border: 1px solid var(--rouge);
   padding: 5px 14px;
   border-radius: 3px;
+  font-weight: 700;
   transition: all .2s;
 }
 
 .nav-links a.nav-cta:hover {
-  background: var(--rouge);
+  background: var(--rouge-fonce);
+  border-color: var(--rouge-fonce);
   color: var(--blanc);
 }
 
